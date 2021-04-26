@@ -1,24 +1,26 @@
 import React from 'react';
 import './App.css';
 import {PrimaryButton, SecondaryButton} from './Buttons';
+import disk from './assets/disk.svg';
+import trashcan from './assets/trashcan.svg';
 
 
-
+const SaveAsFragment = ()=><React.Fragment>Save as...<img src={disk} width="16" height="16" alt="save icon" /> </React.Fragment>
+const DeleteFragment =  ()=><React.Fragment>Delete <img src={trashcan} width="16" height="16" alt="delete icon" /> </React.Fragment>
 function App() {
+
   return (
     <div className="App">
         <h1>Buttons</h1>
-        <PrimaryButton>Hello</PrimaryButton>
+        <PrimaryButton><SaveAsFragment/></PrimaryButton>
         <hr/>
-        <PrimaryButton disabled={true}> Primary two (disabled)</PrimaryButton>
+        <PrimaryButton disabled={true}><SaveAsFragment/></PrimaryButton>
         <hr/>
-        <PrimaryButton>Primary three </PrimaryButton>
+        <PrimaryButton><DeleteFragment/></PrimaryButton>
         <hr/>
-        <SecondaryButton>Secondary one</SecondaryButton>
+        <SecondaryButton><SaveAsFragment/></SecondaryButton>
         <hr/>
-        <SecondaryButton>Secondary two</SecondaryButton>
-        <SecondaryButton disabled={true}>Secondary three (disabled)</SecondaryButton>
-
+        <SecondaryButton disabled={true}><SaveAsFragment/></SecondaryButton>
     </div>
   );
 }
