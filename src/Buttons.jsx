@@ -25,7 +25,6 @@ const secondary = {
 };
 
 // todo I noticed some box shadows put these in at some point
-//box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];
 
 // Styled component named StyledButton
 export const PrimaryButton = styled.button`
@@ -33,7 +32,12 @@ export const PrimaryButton = styled.button`
    color:            ${({disabled})=>disabled? primary.fgDisabled:primary.fg};
    background-color: ${({disabled})=>disabled? primary.bgDisabled:primary.bg};
 
+  // TODO: There is a box shadow, but it could take a VERY long time to get it right, but put in something
+  //box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  
   // TODO this should read !disabled, but for some reason this only works with !!disabled
+  ${({disabled}) => !!disabled} {
   ${({disabled}) => !!disabled} {
      &:hover {
        background-color: ${primary.bgHover};
