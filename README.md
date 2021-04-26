@@ -43,3 +43,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ##Choices I made
 * Not enough time to reproduce every style, but the easy stuff like colors should be reproduced
 * Have never done react components with typescript, and that would slow the process down
+
+## I ran out of time, what I failed to get done:
+* accessibility put in role aria-labelled-by attributes into the svg to get the svg equivalent of alt for images
+* right justification of icons
+* encapsulating the icons for things like size control
+* getting the font sizes and colors, and focus styles "correct"
