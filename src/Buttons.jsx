@@ -52,11 +52,13 @@ export const PrimaryButton = styled.button`
     outline-offset: 3px;
   }
 
-    [data-icon] {
-      float: right;
-      padding-left: 10px;
-      &:before { content: attr(data-icon); }
-    } 
+    // TODO put in code for icon justification support
+    // currently icon is still on its own as child content
+    //[data-icon] {
+    //  float: right;
+    //  padding-left: 10px;
+    //  &:before { content: attr(data-icon); }
+    //} 
     
 }
 
