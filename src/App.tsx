@@ -4,12 +4,12 @@ import FocusTrap from "focus-trap-react";
 import './App.css';
 import {PrimaryButton, SecondaryButton} from './Buttons';
 
-import disk from './assets/disk.svg';
-import trashcan from './assets/trashcan.svg';
+import { ReactComponent as TrashIcon} from './assets/trashcan.svg';
+import { ReactComponent as DiskIcon} from './assets/disk.svg';
 
 
-const SaveAsFragment = ()=><React.Fragment>Save as...<img src={disk} width="16" height="16" alt="save icon" /> </React.Fragment>
-const DeleteFragment =  ()=><React.Fragment>Delete <img src={trashcan} width="16" height="16" alt="delete icon" /> </React.Fragment>
+const SaveAsFragment = ()=><React.Fragment>Save as...<DiskIcon width={16} height={16}/> </React.Fragment>
+const DeleteFragment =  ()=><React.Fragment>Delete   <TrashIcon width={16} height={16}/> </React.Fragment>
 function App() {
 
   return (

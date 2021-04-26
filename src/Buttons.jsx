@@ -52,6 +52,12 @@ export const PrimaryButton = styled.button`
     outline-offset: 3px;
   }
 
+    [data-icon] {
+      float: right;
+      padding-left: 10px;
+      &:before { content: attr(data-icon); }
+    } 
+    
 }
 
 `;
