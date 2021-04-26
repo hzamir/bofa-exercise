@@ -24,13 +24,14 @@ const secondary = {
     fgHover:    '#fff'
 };
 
+// todo I noticed some box shadows put these in at some point
+//box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];
 
 // Styled component named StyledButton
 export const PrimaryButton = styled.button`
    font-size: 14px;
    color:            ${({disabled})=>disabled? primary.fgDisabled:primary.fg};
    background-color: ${({disabled})=>disabled? primary.bgDisabled:primary.bg};
-   border: 1px solid black;
 
   // TODO this should read !disabled, but for some reason this only works with !!disabled
   ${({disabled}) => !!disabled} {
@@ -38,13 +39,23 @@ export const PrimaryButton = styled.button`
        background-color: ${primary.bgHover};
      }
    }
- }
+  
+  // intentionally putting in obvious focus for debugging, come back and fix to look like spec
+  &:focus {
+    outline-width: 1px;
+    outline-style: dotted;
+    outline-color: black;
+    outline-offset: 3px;
+  }
+
+}
 
 `;
 
 export const SecondaryButton = styled(PrimaryButton)`
      color:            ${({disabled})=>disabled? secondary.fgDisabled: secondary.fg};
      background-color: ${({disabled})=>disabled? secondary.bgDisabled:secondary.bg};
+    border: 2px solid black;
 
     // TODO this should read !disabled, but for some reason this only works with !!disabled
     ${({disabled}) => !!disabled} {
@@ -53,4 +64,7 @@ export const SecondaryButton = styled(PrimaryButton)`
         color: ${secondary.fgHover}
       }
     }
- `;
+    
+  //TODO put in a different focus look for secondary buttons (but question the design choice)
+
+`;
